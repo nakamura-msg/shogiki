@@ -1,4 +1,4 @@
-{
+export default koma = {
     "ousyou": {
         "canPromotion": false,
         "default": {
