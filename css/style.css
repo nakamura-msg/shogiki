@@ -1,3 +1,4 @@
+/* TODO: 回転した影響で少し歪んでいる */
 .enemy {
     transform: rotate(180deg);
 }
@@ -5,8 +6,8 @@
 td {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 32px;
-    background-color: coral;
+    background-size: contain;
+    background-color: darkorange;
 }
 
 .ousyou {
