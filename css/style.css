@@ -1,3 +1,70 @@
 .enemy {
     transform: rotate(180deg);
 }
+
+td {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    background-color: coral;
+}
+
+.ousyou {
+    background-image: url(../image/01_ousyou.png);
+}
+
+.gyokusyo {
+    background-image: url(../image/02_gyokusyou.png);
+}
+
+.hisya {
+    background-image: url(../image/03_hisya.png);
+}
+
+.ryuuou {
+    background-image: url(../image/04_ryuuou.png);
+}
+
+.kaku {
+    background-image: url(../image/05_gakugyou.png);
+}
+
+.ryuuma {
+    background-image: url(../image/06_ryuuma.png);
+}
+
+.kin {
+    background-image: url(../image/07_kinsyou.png);
+}
+
+.gin {
+    background-image: url(../image/08_ginsyou.png);
+}
+
+.narigin {
+    background-image: url(../image/09_narigin.png);
+}
+
+.keima {
+    background-image: url(../image/10_keima.png);
+}
+
+.narikei {
+    background-image: url(../image/11_narikei.png);
+}
+
+.kyousha {
+    background-image: url(../image/12_kyousya.png);
+}
+
+.narikyou {
+    background-image: url(../image/13_narikyou.png);
+}
+
+.huhyou {
+    background-image: url(../image/14_fuhyou.png);
+}
+
+.tokin {
+    background-image: url(../image/15_tokin.png);
+}
