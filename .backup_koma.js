@@ -1,4 +1,4 @@
-export default koma = {
+const koma = {
     "ousyou": {
         "canPromotion": false,
         "default": {

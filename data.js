@@ -1,4 +1,3 @@
-import koma from "koma"
 var initTable = () =>{
     //table 内の td 要素をすべて取り出す。
     const list = document.querySelectorAll("td");
