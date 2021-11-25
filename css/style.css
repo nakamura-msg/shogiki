@@ -3,7 +3,11 @@
     transform: rotate(180deg);
 }
 
+table{
+    background-color: #000;
+}
 td {
+    border:1px solid #000;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
