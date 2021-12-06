@@ -30,6 +30,10 @@ var ban = [
     [, , , , , , , ,],
     [, , , , , , , ,]
 ];
+
+var ban1 = [, , , , , , , , ,];
+var ban2 = [, , , , , , , , ,];
+
 var initTable = () => {
     b_count = 0;                            //2次元配列盤のためのカウント
     //table 内の td 要素をすべて取り出す。
@@ -37,7 +41,13 @@ var initTable = () => {
     //td にクリックイベントを付ける。
     for (const td of list) {
         td.onclick = () => onclickTd(td);  // ()=> はアロー関数
-        ban[Math.floor(b_count / 9)][b_count % 9] = classid(getclass(td));               //tdのクラスをとってくる
+        if (b_count < 81) {
+            ban[Math.floor(b_count / 9)][b_count % 9] = classid(getclass(td));               //tdのクラスをとってくる
+        } else if (b_count < 90) {
+            ban1[b_count % 9] = classid(getclass(td));               //tdのクラスをとってくる
+        } else {
+            ban2[b_count % 9] = classid(getclass(td));               //tdのクラスをとってくる
+        }
         b_count++;
     }
 }
@@ -101,4 +111,14 @@ var classid = (g_class) => {       //g_classにはclass名が入る
             return 16;
             break;
     }
+}
+
+var onclickTd = (td) => {
+    //テーブルをクリックしたときの動作
+
+}
+
+window.onload = () => {
+    // 実行したい処理を書く
+    initTable();
 }
