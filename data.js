@@ -1,24 +1,3 @@
-var pick = document.getElementById("pick");
-
-document.addEventListener("click", function (e) {
-    var sell = document.getElementById(e.target.id);
-
-    // 駒ピックトグル
-    if (pick.className !== "") {
-
-        // 空白なら駒配置
-        if (sell.className == "") {
-            sell.className = pick.className;
-            pick.className = "";
-        } else {
-            console.log("衝突")
-        }
-    } else {
-        pick.className = sell.className;
-        sell.className = "";
-    }
-});
-
 var ban = [
     [, , , , , , , ,],
     [, , , , , , , ,],
@@ -116,9 +95,25 @@ var classid = (g_class) => {       //g_classにはclass名が入る
 var onclickTd = (td) => {
     //テーブルをクリックしたときの動作
 
+    // 駒ピックトグル
+    if (pick.className !== "") {
+
+        // 空白なら駒配置
+        if (td.className == "") {
+            td.className = pick.className;
+            pick.className = "";
+        } else {
+            console.log("衝突");
+        }
+    } else {
+        pick.className = td.className;
+        td.className = "";
+    }
 }
 
 window.onload = () => {
     // 実行したい処理を書く
     initTable();
+    var pick = document.getElementById("pick");
+
 }
