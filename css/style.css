@@ -5,6 +5,11 @@
 
 table{
     background-color: #000;
+    border: solid 1px #000;
+
+}
+tr{
+    text-align: center;
 }
 td {
     border:1px solid #000;
@@ -73,3 +78,41 @@ td {
 .tokin {
     background-image: url(../image/15_tokin.png);
 }
+
+
+#wrap{
+    position:relative;
+    width: 900px;
+    height: 600px;
+}
+#ban{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+}
+#gote,#sente{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: gold;
+}
+#gote{
+    right: 0;
+    top: 0;
+}
+#sente{
+    right: 0;
+    bottom: 0;
+}
+#pick{
+    position: absolute;
+    right: 0;
+    top: 200px;
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: aqua;
+}
+
