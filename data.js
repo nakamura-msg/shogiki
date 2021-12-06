@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var pick = document.getElementById("pick");
 
 document.addEventListener("click", function (e) {
@@ -19,7 +18,7 @@ document.addEventListener("click", function (e) {
         sell.className = "";
     }
 });
-=======
+
 var ban = [
     [,,,,,,,,],
     [,,,,,,,,],
@@ -103,4 +102,3 @@ var classid = (g_class) => {       //g_classにはclass名が入る
             break;
     }
 }
->>>>>>> nakamura
