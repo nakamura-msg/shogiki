@@ -16,7 +16,7 @@ var initTable = () => {
     //td にクリックイベントを付ける。
     for (const td of list) {
         td.onclick = () => onclickTd(td);  // ()=> はアロー関数
-        ban[Math.floor(b_count/9][b_count%9] = classid(getclass(td));               //tdのクラスをとってくる
+        ban[Math.floor(b_count/9)][b_count%9] = classid(getclass(td));               //tdのクラスをとってきてクラスに応じてIDをbanに割り振る
         b_count++;
     }
 }
