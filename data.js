@@ -20,15 +20,15 @@ document.addEventListener("click", function (e) {
 });
 
 var ban = [
-    [,,,,,,,,],
-    [,,,,,,,,],
-    [,,,,,,,,],
-    [,,,,,,,,],
-    [,,,,,,,,],
-    [,,,,,,,,],
-    [,,,,,,,,],
-    [,,,,,,,,],
-    [,,,,,,,,]
+    [, , , , , , , ,],
+    [, , , , , , , ,],
+    [, , , , , , , ,],
+    [, , , , , , , ,],
+    [, , , , , , , ,],
+    [, , , , , , , ,],
+    [, , , , , , , ,],
+    [, , , , , , , ,],
+    [, , , , , , , ,]
 ];
 var initTable = () => {
     b_count = 0;                            //2次元配列盤のためのカウント
@@ -37,7 +37,7 @@ var initTable = () => {
     //td にクリックイベントを付ける。
     for (const td of list) {
         td.onclick = () => onclickTd(td);  // ()=> はアロー関数
-        ban[Math.floor(b_count/9)][b_count%9] = classid(getclass(td));               //tdのクラスをとってくる
+        ban[Math.floor(b_count / 9)][b_count % 9] = classid(getclass(td));               //tdのクラスをとってくる
         b_count++;
     }
 }
@@ -48,7 +48,7 @@ var getclass = (e_koma) => {        //e_komaの部分にelementを入れる
 }
 
 var classid = (g_class) => {       //g_classにはclass名が入る
-    switch(g_class){
+    switch (g_class) {
         case "":
             return 0;
             break;
