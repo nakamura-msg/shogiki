@@ -10,14 +10,26 @@ document.addEventListener("click", function (e) {
 
         // 空白なら駒配置
         if (sell.className == "") {
+            if(e_id < 100){
+                ban[Math.floor(e_id/10)-1][e_id%10-1] = p_id;
+            }else if(e_id < 110){
+                ban1[e_id%10-1] = p_id;
+            }else{
+                ban2[e_id%10-1] = p_id;
+            }
             sell.className = pick.className;
-            ban[Math.floor(e_id/10)-1][e_id%10-1] = p_id;
             pick.className = "";
         } else {
             console.log("衝突")
         }
     } else {
-        p_id = ban[Math.floor(e_id/10)-1][e_id%10-1];
+        if(e_id < 100){
+            p_id = ban[Math.floor(e_id/10)-1][e_id%10-1];
+        }else if(e_id < 110){
+            p_id = ban1[e_id%10-1];
+        }else{
+            p_id = ban2[e_id%10-1];
+        }
         ban[Math.floor(e_id/10)-1][e_id%10-1] = 0;
         pick.className = sell.className;
         sell.className = "";
