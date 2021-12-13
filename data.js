@@ -1,7 +1,9 @@
 var pick = document.getElementById("pick");
+var p_id = 0;
 
 document.addEventListener("click", function (e) {
-    var sell = document.getElementById(e.target.id);
+    var e_id = e.target.id
+    var sell = document.getElementById(e_id);
 
     // 駒ピックトグル
     if (pick.className !== "") {
@@ -9,11 +11,14 @@ document.addEventListener("click", function (e) {
         // 空白なら駒配置
         if (sell.className == "") {
             sell.className = pick.className;
+            ban[Math.floor(e_id/10)-1][e_id%10-1] = p_id;
             pick.className = "";
         } else {
             console.log("衝突")
         }
     } else {
+        p_id = ban[Math.floor(e_id/10)-1][e_id%10-1];
+        ban[Math.floor(e_id/10)-1][e_id%10-1] = 0;
         pick.className = sell.className;
         sell.className = "";
     }
